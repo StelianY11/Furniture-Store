@@ -1,10 +1,13 @@
 import express from "express";
 import routes from "./routes.js";
-import { corsMiddleware } from "./middlewares/cors.js";
+
+import cors from "cors";
+//import { corsMiddleware } from "./middlewares/cors.js";
 
 const app = express();
 
-app.use(corsMiddleware);
+//app.use(corsMiddleware); 
+app.use(cors()); //Cors library(by default everything is allowed)
 
 app.use(routes);
 
