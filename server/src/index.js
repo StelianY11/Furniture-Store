@@ -6,6 +6,8 @@ import cors from "cors";
 
 const app = express();
 
+app.use(express.json());
+
 //app.use(corsMiddleware); 
 app.use(cors()); //Cors library(by default everything is allowed)
 
